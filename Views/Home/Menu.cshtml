@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Menú Principal";
+}
+
+<div class="main-content">
+    <h1 class="page-title">Menú Principal</h1>
+
+    <a class="menu-card" href="/Inventario/CrearProducto">
+    <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14"/>
+        <path d="M5 12h14"/>
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+    </svg>
+    <span class="menu-card-label">Crear nuevo producto</span>
+</a>
+
+    <div class="menu-grid">
+        <a class="menu-card" href="/Inventario/RegistrarEntrada">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            </svg>
+            <span class="menu-card-label">Registrar entrada de producto</span>
+        </a>
+
+        <a class="menu-card" href="/Documentos/NotaDespacho">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11H5a2 2 0 00-2 2v5a2 2 0 002 2h14a2 2 0 002-2v-5a2 2 0 00-2-2h-4M9 11V7a3 3 0 116 0v4M9 11h6"/>
+            </svg>
+            <span class="menu-card-label">Preparar despacho</span>
+        </a>
+
+        <a class="menu-card" href="/Documentos/InformeBaja">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+            <span class="menu-card-label">Generar informe de baja</span>
+        </a>
+
+        <a class="menu-card" href="/Inventario/AsignarUbicacion">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span class="menu-card-label">Asignar ubicación</span>
+        </a>
+
+        <a class="menu-card" href="/Inventario/RegistrarSalida">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/>
+            </svg>
+            <span class="menu-card-label">Registrar salida</span>
+        </a>
+
+        <a class="menu-card" href="/Inventario/ConsultarMovimientos">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span class="menu-card-label">Consultar movimientos</span>
+        </a>
+
+        <a class="menu-card" href="/Inventario/VerificarDocumentos">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                <polyline points="9 15 11 17 15 13"/>
+            </svg>
+            <span class="menu-card-label">Verificar documentos</span>
+        </a>
+
+        <a class="menu-card" href="/Inventario/GenerarAlerta">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span class="menu-card-label">Generar alerta por nivel mínimo</span>
+        </a>
+    </div>
+</div>

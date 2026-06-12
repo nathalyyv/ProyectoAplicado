@@ -1,0 +1,107 @@
+@{
+    ViewData["Title"] = "Control de Inventario";
+    ViewData["NavActive"] = "inventario";
+}
+
+<div class="main-content">
+    <div class="flex-between mb-2">
+        <h1 class="page-title">Movimientos de inventario</h1>
+        <div class="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" placeholder="Buscar..." />
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="card card-gold">
+            <div class="section-heading" style="margin-top:0">Estado general</div>
+            <div class="flex gap-3 mt-2">
+                <div>
+                    <div class="stat-circle stat-gold">78%</div>
+                    <div class="stat-label">Nivel de stock actual</div>
+                </div>
+                <div>
+                    <div class="stat-circle stat-blue">12%</div>
+                    <div class="stat-label">Productos próximos a vencer</div>
+                </div>
+            </div>
+            <div class="mt-2 text-muted">Última actualización: <span style="color:#aaa">26/10/2025 09:41</span></div>
+            <div class="mt-1 text-muted">Total de productos registrados: <span style="color:#aaa">342</span></div>
+        </div>
+
+        <div class="card">
+            <div class="flex-between mb-1">
+                <span style="font-weight:600;font-size:14px">Movimientos últimos 30 días</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+            </div>
+            <div class="chart-legend mb-1">
+                <div class="legend-item"><div style="width:10px;height:10px;border-radius:2px;background:#4caf7d"></div> Entradas</div>
+                <div class="legend-item"><div style="width:10px;height:10px;border-radius:2px;background:#e05252"></div> Salidas</div>
+            </div>
+            <div class="fake-chart"></div>
+            <div style="height:40px;margin-top:6px;background:linear-gradient(to right,rgba(224,82,82,0.3),rgba(224,82,82,0.1));border-radius:6px;position:relative">
+                <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:#e05252"></div>
+            </div>
+        </div>
+
+        <div class="card" style="grid-column: 1 / -1;">
+            <div style="font-weight:600;font-size:14px;margin-bottom:12px">Alertas</div>
+            <div class="alert-item">
+                <div class="alert-dot dot-green"></div>
+                <span>① Nivel mínimo: Refrescos.</span>
+            </div>
+            <div class="alert-item">
+                <div class="alert-dot dot-red"></div>
+                <span>② Próximo a vencer: Cerveza corona (150un).</span>
+            </div>
+            <div class="alert-item" style="border:none">
+                <div class="alert-dot" style="background:#5b9bd5"></div>
+                <span>Documento pendiente: nota de despacho #229</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-heading mt-3">Acceso rápido</div>
+    <div class="menu-grid">
+        <a class="menu-card" href="/Inventario/RegistrarEntrada">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            </svg>
+            <span class="menu-card-label">Registrar entrada de producto</span>
+        </a>
+        <a class="menu-card" href="/Documentos/NotaDespacho">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11H5a2 2 0 00-2 2v5a2 2 0 002 2h14a2 2 0 002-2v-5a2 2 0 00-2-2h-4M9 11V7a3 3 0 116 0v4M9 11h6"/>
+            </svg>
+            <span class="menu-card-label">Preparar despacho</span>
+        </a>
+        <a class="menu-card" href="/Inventario/RegistrarSalida">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/>
+            </svg>
+            <span class="menu-card-label">Registrar salida</span>
+        </a>
+        <a class="menu-card" href="/Inventario/AsignarUbicacion">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span class="menu-card-label">Asignar ubicación</span>
+        </a>
+        <a class="menu-card" href="/Inventario/ConsultarMovimientos">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span class="menu-card-label">Consultar movimientos</span>
+        </a>
+        <a class="menu-card" href="/Inventario/GenerarAlerta">
+            <svg class="menu-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+            <span class="menu-card-label">Generar alerta por nivel mínimo</span>
+        </a>
+    </div>
+</div>

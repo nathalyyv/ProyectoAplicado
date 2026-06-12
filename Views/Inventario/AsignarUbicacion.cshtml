@@ -1,0 +1,86 @@
+@{
+    ViewData["Title"] = "Asignar Ubicación";
+    ViewData["NavActive"] = "inventario";
+}
+
+<div class="main-content">
+    <h1 class="page-title">Ubicación en almacén</h1>
+
+    <div class="two-col">
+        <div class="card card-gold">
+            <div class="search-bar mb-2" style="max-width:100%">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" placeholder="Buscar código del producto" />
+            </div>
+
+            <div class="section-heading">Productos pendientes por ubicar:</div>
+            <ul class="sidebar-list">
+                <li>15x Ron Barceló <span class="sidebar-arrow">▶</span></li>
+                <li>20x Tequila Don Julio <span class="sidebar-arrow">▶</span></li>
+            </ul>
+
+            <div class="section-heading">Ubicaciones sugeridas</div>
+            <div class="ubicacion-grid">
+                <button class="ubicacion-btn selected">AI-01</button>
+                <button class="ubicacion-btn">AI-02</button>
+                <button class="ubicacion-btn">BI-01</button>
+            </div>
+
+            <div class="section-heading">Todas las ubicaciones disponibles</div>
+            <div class="ubicacion-grid">
+                <button class="ubicacion-btn">AI-01</button>
+                <button class="ubicacion-btn">AI-02</button>
+                <button class="ubicacion-btn">BI-01</button>
+                <button class="ubicacion-btn">BI-02</button>
+                <button class="ubicacion-btn">BI-03</button>
+                <button class="ubicacion-btn">BI-06</button>
+                <button class="ubicacion-btn">AI-04</button>
+                <button class="ubicacion-btn">A2-01</button>
+                <button class="ubicacion-btn">B2-02</button>
+            </div>
+
+            <div class="mt-3 text-center">
+                <button class="btn btn-gold" onclick="showModal('modalUbicacionOk')">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalUbicacionOk">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Ubicación asignada correctamente.</div>
+        <div class="modal-actions">
+            <a class="btn btn-gold" href="/Home/Dashboard">✔ Aceptar</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalUbicacionError">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">La ubicación ya no está disponible.</div>
+        <div class="modal-actions">
+            <button class="btn btn-gold" onclick="hideModal('modalUbicacionError')">Seleccionar otra ubicación</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.querySelectorAll('.ubicacion-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.ubicacion-btn').forEach(b => b.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+</script>
+}

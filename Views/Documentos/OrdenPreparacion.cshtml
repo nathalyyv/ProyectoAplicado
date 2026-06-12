@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Orden de Preparación";
+    ViewData["NavActive"] = "documentos";
+}
+
+<div class="main-content">
+    <div class="card card-gold" style="max-width:680px">
+        <div class="section-heading" style="margin-top:0">Orden de preparación</div>
+
+        <div class="form-group">
+            <label>Número de orden:</label>
+            <input class="form-control" type="text" value="24" />
+        </div>
+        <div class="form-group">
+            <label>Código del producto:</label>
+            <input class="form-control" type="text" value="283940003" />
+        </div>
+        <div class="form-group">
+            <label>Cantidad a despachar:</label>
+            <input class="form-control" type="number" value="8" />
+        </div>
+        <div class="form-group">
+            <label>Destino del pedido:</label>
+            <input class="form-control" type="text" value="C/ 27 de febrero, Tenares, centro del pueblo" />
+        </div>
+
+        <div class="section-heading">Firma del encargado</div>
+        <div class="form-group">
+            <label>Firma encargado:</label>
+            <input class="form-control" type="text" value="Usuario: Joselito Perez - firma electrónica" readonly />
+        </div>
+
+        <div class="mt-3 text-center">
+            <button class="btn btn-gold" onclick="showModal('modalOrdenOk')">Generar orden de preparación</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalOrdenOk">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Orden de preparación generada con éxito.</div>
+        <div class="modal-actions">
+            <a class="btn btn-gold" href="/Documentos/Index">✔ Aceptar</a>
+        </div>
+    </div>
+</div>

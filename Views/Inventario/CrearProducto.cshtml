@@ -1,0 +1,84 @@
+@{
+    ViewData["Title"] = "Crear Producto";
+    ViewData["NavActive"] = "inventario";
+}
+
+<div class="main-content">
+    <h1 class="page-title">Crear nuevo producto</h1>
+
+    <div class="card card-gold" style="max-width:680px">
+        <div class="section-heading" style="margin-top:0">Crear nuevo Producto</div>
+
+        <div class="form-group">
+            <label>Nombre del producto:</label>
+            <input class="form-control" type="text" placeholder="Ej: Ron Barceló" />
+        </div>
+        <div class="form-group">
+            <label>Código del producto:</label>
+            <input class="form-control" type="text" placeholder="Ej: 5678-RB" />
+        </div>
+        <div class="form-group">
+            <label>Proveedor:</label>
+            <input class="form-control" type="text" placeholder="Ej: Distribuidora Norte" />
+        </div>
+       
+        
+        <div class="form-group">
+            <label>Creado por:</label>
+            <input class="form-control" type="text" value="Juan Pérez" readonly />
+        </div>
+
+        <div class="mt-3 text-center">
+            <button class="btn btn-gold" onclick="showModal('modalRegistrado')">Confirmar</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalRegistrado">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Se ha creado con exito el producto.</div>
+        <div class="modal-actions">
+            <a class="btn btn-gold" href="/Inventario/AsignarUbicacion">✔️ Aceptar</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalErrorCampos">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-icon-error">▲ ERROR</div>
+        <div class="modal-message">Debe completar todos los campos antes de confirmar.</div>
+        <div class="modal-actions">
+            <button class="btn btn-gold" onclick="hideModal('modalErrorCampos')">✔️ Aceptar</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal-overlay" id="modalEntradaOk">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Se ha creado con exito el producto.</div>
+        <div class="modal-actions">
+            <a class="btn btn-gold" href="/Home/Dashboard">✔️ Aceptar</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    });
+</script>
+}

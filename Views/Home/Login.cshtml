@@ -1,0 +1,61 @@
+@{
+    ViewData["Title"] = "Inicio de Sesión";
+    ViewData["HideNav"] = true;
+}
+
+<div class="login-page">
+    <div class="login-box">
+        <svg width="80" height="80" viewBox="0 0 80 80" class="login-logo" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" fill="#2c2c2c" stroke="#D4A017" stroke-width="3"/>
+            <text x="40" y="50" text-anchor="middle" font-size="32" font-weight="bold" fill="#D4A017" font-family="serif">G</text>
+            <text x="40" y="66" text-anchor="middle" font-size="11" font-weight="bold" fill="#D4A017" font-family="sans-serif" letter-spacing="3">GOLD</text>
+        </svg>
+
+        <div class="login-title">Acceso al Sistema</div>
+
+        <div class="login-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            <input type="text" placeholder="Nombre de usuario" id="usuario" />
+        </div>
+
+        <div class="login-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            <input type="password" placeholder="Contraseña" id="contrasena" />
+        </div>
+
+        <a class="login-btn" href="/Home/Dashboard" id="btnLogin">Iniciar Sesión</a>
+        <a class="forgot-link" href="#" onclick="showModal('modalError'); return false;">¿Olvidaste tu contraseña?</a>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalError">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">
+            Inicio de sesión incorrecto. Por favor verifique su usuario y contraseña.
+        </div>
+        <div class="modal-actions">
+            <button class="btn btn-gold" onclick="hideModal('modalError')">Reintentar</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.getElementById('btnLogin').addEventListener('click', function(e) {
+        const u = document.getElementById('usuario').value;
+        const p = document.getElementById('contrasena').value;
+        if (!u || !p) {
+            e.preventDefault();
+            showModal('modalError');
+        }
+    });
+</script>
+}

@@ -1,0 +1,92 @@
+@{
+    ViewData["Title"] = "Nota de Despacho";
+    ViewData["NavActive"] = "documentos";
+}
+
+<div class="main-content">
+    <div class="two-col">
+        <div class="card card-gold">
+            <div class="section-heading" style="margin-top:0">Nota de despacho</div>
+
+            <div class="form-group">
+                <label>Num. nota de despacho:</label>
+                <input class="form-control" type="text" value="408542" />
+            </div>
+            <div class="form-group">
+                <label>Fecha de emisión:</label>
+                <input class="form-control" type="text" value="26/10/2025" />
+            </div>
+            <div class="form-group">
+                <label>Dirección de entrega:</label>
+                <input class="form-control" type="text" value="C/ 27 de febrero, Tenares, centro del pueblo" />
+            </div>
+            <div class="form-group">
+                <label>Descripción del producto:</label>
+                <input class="form-control" type="text" value="Tequila Don Julio 70 6x75 Cl" />
+            </div>
+            <div class="form-group">
+                <label>Código del producto:</label>
+                <input class="form-control" type="text" value="BB076689638" />
+            </div>
+            <div class="form-group">
+                <label>Num. de orden:</label>
+                <input class="form-control" type="text" value="0893799" />
+            </div>
+            <div class="form-group">
+                <label>Cantidad despachada:</label>
+                <input class="form-control" type="number" value="54" />
+            </div>
+
+            <div class="section-heading">Datos de entrega:</div>
+            <div class="form-group">
+                <label>Nombre de quien recibe:</label>
+                <input class="form-control" type="text" value="Carlos De Jesús" />
+            </div>
+            <div class="form-group">
+                <label>Encargado de despacho:</label>
+                <input class="form-control" type="text" value="Camilo Alonso" />
+            </div>
+
+            <div class="mt-3 text-center">
+                <button class="btn btn-gold" onclick="showModal('modalDespachoOk')">Generar nota de despacho</button>
+            </div>
+        </div>
+
+        <!-- Sidebar ordenes pendientes -->
+        <div>
+            <div style="font-weight:600;margin-bottom:12px;font-size:14px">1. Órdenes pendientes:</div>
+            <ul class="sidebar-list">
+                <li>N.° ORDEN DESP-0012 <span class="sidebar-arrow">▶</span></li>
+                <li>N.° ORDEN RBE-1004 <span class="sidebar-arrow">▶</span></li>
+                <li>N.° ORDEN JAM-5032 <span class="sidebar-arrow">▶</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalDespachoOk">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Nota de despacho realizada con éxito.</div>
+        <div class="modal-actions">
+            <a class="btn btn-gold" href="/Documentos/Index">✔ Aceptar</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal producto insuficiente -->
+<div class="modal-overlay" id="modalProductoInsuficiente">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Lo sentimos, no se pudo generar la nota de despacho por falta de stock.</div>
+        <div class="modal-actions">
+            <button class="btn btn-gold" onclick="hideModal('modalProductoInsuficiente')">✔ Aceptar</button>
+        </div>
+    </div>
+</div>

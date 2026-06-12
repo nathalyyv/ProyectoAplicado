@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "Reporte de Incidentes";
+    ViewData["NavActive"] = "documentos";
+}
+
+<div class="main-content">
+    <div class="two-col">
+        <div class="card card-gold">
+            <div class="section-heading" style="margin-top:0">Fecha de incidente</div>
+
+            <div class="form-group">
+                <label>Fecha de guía:</label>
+                <input class="form-control" type="text" value="26/10/2025" />
+            </div>
+            <div class="form-group">
+                <label>Número de guía:</label>
+                <input class="form-control" type="text" value="GIA-2025-0123" />
+            </div>
+            <div class="form-group">
+                <label>Código de producto:</label>
+                <input class="form-control" type="text" value="Cód: 5678 - Ron añejo" />
+            </div>
+            <div class="form-group">
+                <label>Cantidad de producto:</label>
+                <input class="form-control" type="number" value="5" />
+            </div>
+            <div class="form-group">
+                <label>Cantidad de faltante:</label>
+                <input class="form-control" type="text" value="Cód: 5678 - Ron añejo" />
+            </div>
+
+            <div class="section-heading">Descripción del problema</div>
+            <textarea style="width:100%;background:var(--bg-input);border:1px solid #555;border-radius:6px;padding:12px;color:var(--gold-light);font-family:'Inter',sans-serif;font-size:13px;resize:vertical;min-height:80px">Cinco botellas de ron añejo dañadas durante el transporte. Cajas humedas y sellos rotos en su totalidad.</textarea>
+
+            <div class="section-heading">Firma del encargado del almacén</div>
+            <div class="form-group">
+                <label>Firma encargado:</label>
+                <input class="form-control" type="text" value="Usuario: [Jedeermín Pérez] - Firma electrónica" readonly />
+            </div>
+
+            <div class="mt-3 flex gap-2" style="justify-content:center">
+                <button class="btn btn-outline" onclick="showModal('modalReporteOk')">Generar reporte de incidente</button>
+                <a class="btn btn-gold" href="/Documentos/ReporteImpreso">Imprimir reporte</a>
+            </div>
+        </div>
+
+        <div>
+            <div style="font-weight:600;margin-bottom:12px;font-size:14px">Archivos recientes</div>
+            <ul class="sidebar-list">
+                <li>INC 2025-0045</li>
+                <li>INC 2025-0044</li>
+                <li>INC 2025-0043</li>
+                <li>INC 2025-0042</li>
+                <li>INC 2025-0041</li>
+                <li>INC 2025-0040</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalReporteOk">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Reporte de incidente generado con éxito.</div>
+        <div class="modal-actions">
+            <a class="btn btn-gold" href="/Documentos/Index">✔ Aceptar</a>
+        </div>
+    </div>
+</div>

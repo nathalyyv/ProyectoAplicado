@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gold Club</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @if (ViewData["HideNav"] == null || !(bool)ViewData["HideNav"])
+    {
+        <nav class="navbar">
+            <a class="navbar-brand" href="/Home/Dashboard">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/>
+                    <text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text>
+                </svg>
+            </a>
+
+            <a class="nav-item @(ViewData["NavActive"]?.ToString() == "inventario" ? "active" : "")" href="/Home/Dashboard">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                </svg>
+                Control de inventario
+            </a>
+
+            <a class="nav-item @(ViewData["NavActive"]?.ToString() == "documentos" ? "active" : "")" href="/Documentos/Index">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+                </svg>
+                Documentos digitalizados
+            </a>
+
+            <a class="nav-item @(ViewData["NavActive"]?.ToString() == "tareas" ? "active" : "")" href="/Tareas/Caducidad">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/>
+                </svg>
+                Gestión de tareas y caducidades
+            </a>
+
+            <a class="nav-item" href="/Home/Menu">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+                </svg>
+                Más opciones
+            </a>
+
+            <span class="nav-spacer"></span>
+
+            <a class="btn-logout" href="#" onclick="showModal('modalCerrarConfirm'); return false;">Cerrar sesión</a>
+        </nav>
+    }
+
+    @RenderBody()
+
+    <!-- Modal: Confirmar cerrar sesión -->
+    <div class="modal-overlay" id="modalCerrarConfirm">
+        <div class="modal-box">
+            <div class="modal-brand">
+                <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+                Gold Club
+            </div>
+            <div class="modal-message">¿Estás seguro de que deseas cerrar sesión?</div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="hideModal('modalCerrarConfirm')">Cancelar</button>
+                <a class="btn btn-gold" href="/Home/Login">✔ Aceptar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Sesión cerrada -->
+    <div class="modal-overlay" id="modalCerradoOk">
+        <div class="modal-box">
+            <div class="modal-brand">
+                <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+                Gold Club
+            </div>
+            <div class="modal-message">¡Sesión cerrada correctamente!</div>
+            <div class="modal-actions">
+                <a class="btn btn-gold" href="/Home/Login">✔ Aceptar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

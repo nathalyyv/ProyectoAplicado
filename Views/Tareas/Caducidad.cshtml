@@ -1,0 +1,76 @@
+@{
+    ViewData["Title"] = "Gestión de Tareas y Caducidades";
+    ViewData["NavActive"] = "tareas";
+}
+
+<div class="main-content">
+    <h1 class="page-title">Gestión de tareas y caducidades</h1>
+
+    <div class="two-col">
+        <!-- Calendario -->
+        <div class="card card-gold">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+                <button class="btn btn-outline" style="padding:4px 10px;font-size:13px">←</button>
+                <span style="font-weight:600;font-size:15px">April 2025</span>
+                <button class="btn btn-outline" style="padding:4px 10px;font-size:13px">→</button>
+            </div>
+
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>SUN</th><th>MON</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="calendar-today">20</strong></td>
+                        <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+                    </tr>
+                    <tr>
+                        <td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mt-2 flex-between">
+                <span class="text-muted" style="font-size:12px">Time</span>
+                <span style="background:var(--bg-input);border-radius:4px;padding:3px 10px;font-size:12px;color:var(--gold)">9:41 AM</span>
+            </div>
+        </div>
+
+        <!-- Tareas y alertas -->
+        <div>
+            <div class="task-card task-alerta-proxima">
+                <div class="task-header">
+                    <span>⏰</span> ALERTA PRÓXIMA
+                </div>
+                Revisión general de inventario<br>
+                <small>15/10/2025</small>
+            </div>
+
+            <div class="task-card task-pendiente">
+                <div class="task-header" style="color:var(--text-muted)">
+                    🗂 PENDIENTE
+                </div>
+                Revisión de vencimiento de cervezas artezanales
+            </div>
+
+            <div class="task-card task-alerta-maxima">
+                <div class="task-header">
+                    <span>⚠️</span> ALERTA MÁXIMO
+                </div>
+                Reponer producto: Ron añejo<br>
+                <small>[Cód:1234]</small>
+            </div>
+        </div>
+    </div>
+</div>

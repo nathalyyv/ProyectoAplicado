@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Generar Alerta";
+    ViewData["NavActive"] = "inventario";
+}
+
+<div class="main-content">
+    <h1 class="page-title">
+        <span style="color:var(--gold);margin-right:8px">🔔</span>
+        Generar alerta por nivel mínimo
+    </h1>
+    <p class="text-muted mb-2">Ingrese el código del producto para verificar su nivel de stock.</p>
+
+    <div class="card card-gold" style="max-width:680px">
+        <div class="flex gap-2 mb-3">
+            <input class="form-control" type="text" placeholder="Código del producto..." style="max-width:none;flex:1" />
+            <button class="btn btn-gold" onclick="showModal('modalAlertaConfirm')">Generar alerta</button>
+            <a class="btn btn-outline" href="/Home/Dashboard">Cancelar</a>
+        </div>
+
+        <div class="section-heading">Mensajes del sistema</div>
+        <div style="background:var(--bg-input);border-radius:8px;min-height:120px;padding:16px;font-size:13px;color:var(--text-muted)" id="mensajesSistema">
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalAlertaConfirm">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">¿Desea confirmar generar la alerta por stock mínimo?</div>
+        <div class="modal-actions">
+            <button class="btn btn-danger" onclick="hideModal('modalAlertaConfirm')">✕ Cancelar</button>
+            <button class="btn btn-gold" onclick="hideModal('modalAlertaConfirm');showModal('modalAlertaOk')">✔ Confirmar</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalAlertaOk">
+    <div class="modal-box">
+        <div class="modal-brand">
+            <svg width="20" height="20" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" fill="#2c2c2c" stroke="#D4A017" stroke-width="2"/><text x="22" y="27" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4A017" font-family="serif">G</text></svg>
+            Gold Club
+        </div>
+        <div class="modal-message">Se ha confirmado con éxito la alerta por stock mínimo.</div>
+        <div class="modal-actions">
+            <a class="btn btn-gold" href="/Home/Dashboard">✔ Aceptar</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    document.querySelector('.btn-gold').addEventListener('click', function() {
+        const codigo = document.querySelector('input[placeholder="Código del producto..."]').value;
+        if (codigo) {
+            document.getElementById('mensajesSistema').innerHTML =
+                `<span style="color:var(--gold)">▶</span> Verificando stock para: <strong style="color:white">${codigo}</strong><br>
+                 <span style="color:#e05252">⚠</span> Nivel de stock por debajo del mínimo establecido (15 unidades).`;
+        }
+    });
+</script>
+}
