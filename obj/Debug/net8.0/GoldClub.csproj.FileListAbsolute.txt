@@ -27,3 +27,4 @@ C:\Users\natha\Downloads\GoldClub\GoldClub\obj\Debug\net8.0\refint\GoldClub.dll
 C:\Users\natha\Downloads\GoldClub\GoldClub\obj\Debug\net8.0\GoldClub.pdb
 C:\Users\natha\Downloads\GoldClub\GoldClub\obj\Debug\net8.0\GoldClub.genruntimeconfig.cache
 C:\Users\natha\Downloads\GoldClub\GoldClub\obj\Debug\net8.0\ref\GoldClub.dll
+C:\Users\natha\Downloads\GoldClub\GoldClub\obj\Debug\net8.0\GoldClub.sourcelink.json
