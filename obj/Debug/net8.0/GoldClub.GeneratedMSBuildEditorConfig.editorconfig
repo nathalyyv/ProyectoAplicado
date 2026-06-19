@@ -8,96 +8,97 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GoldClub
 build_property.RootNamespace = GoldClub
-build_property.ProjectDir = C:\Users\natha\Downloads\GoldClub\GoldClub\
+build_property.ProjectDir = C:\Users\User\ProyectoAplicado\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\natha\Downloads\GoldClub\GoldClub
+build_property.MSBuildProjectDirectory = C:\Users\User\ProyectoAplicado
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Documentos/Index.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Documentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Documentos/InformeBaja.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Documentos/InformeBaja.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRvc1xJbmZvcm1lQmFqYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Documentos/NotaDespacho.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Documentos/NotaDespacho.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRvc1xOb3RhRGVzcGFjaG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Documentos/OrdenPreparacion.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Documentos/OrdenPreparacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRvc1xPcmRlblByZXBhcmFjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Documentos/ReporteImpreso.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Documentos/ReporteImpreso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRvc1xSZXBvcnRlSW1wcmVzby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Documentos/ReporteIncidentes.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Documentos/ReporteIncidentes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRvc1xSZXBvcnRlSW5jaWRlbnRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Home/Dashboard.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Home/Login.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Home/Menu.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Home/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Inventario/AsignarUbicacion.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Inventario/AsignarUbicacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xBc2lnbmFyVWJpY2FjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Inventario/ConsultarMovimientos.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Inventario/ConsultarMovimientos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xDb25zdWx0YXJNb3ZpbWllbnRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Inventario/CrearProducto.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Inventario/CrearProducto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xDcmVhclByb2R1Y3RvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Inventario/GenerarAlerta.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Inventario/GenerarAlerta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xHZW5lcmFyQWxlcnRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Inventario/RegistrarEntrada.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Inventario/RegistrarEntrada.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xSZWdpc3RyYXJFbnRyYWRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Inventario/RegistrarSalida.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Inventario/RegistrarSalida.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xSZWdpc3RyYXJTYWxpZGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Inventario/VerificarDocumentos.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Inventario/VerificarDocumentos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xWZXJpZmljYXJEb2N1bWVudG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Shared/_Layout.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/Tareas/Caducidad.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/Tareas/Caducidad.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXENhZHVjaWRhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/_ViewImports.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/natha/Downloads/GoldClub/GoldClub/Views/_ViewStart.cshtml]
+[C:/Users/User/ProyectoAplicado/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
